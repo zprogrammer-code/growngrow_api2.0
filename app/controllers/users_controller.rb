@@ -14,4 +14,7 @@ class UsersController < ApplicationController
 
         render json:  { user: @user }
     end
+
+    def update
+        @user = User.find_by(username: params[:username])
 end
