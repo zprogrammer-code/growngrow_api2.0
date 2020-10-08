@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
-  get 'home/index'
-  resources :users, only: [:index, :create]
+  # get 'home/index'
+  resources :users
   post 'login', to: 'authentication#login'
   
   
