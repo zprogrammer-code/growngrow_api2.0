@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
  
   # get 'home/index'
+  resources :todos do
+    resources :items
+  end
   resources :users
   post 'login', to: 'authentication#login'
   
